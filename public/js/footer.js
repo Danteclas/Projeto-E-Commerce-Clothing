@@ -4,6 +4,7 @@ const createFooter = ()=>{
     footer.innerHTML = `
         <div class="footer-content">
         <img src="./img/light-logo.png" class="logo" alt="">
+        
         <div class="footer-ul-container">
             <ul class="category">
                 <li class="category-title">men</li>
@@ -33,32 +34,49 @@ const createFooter = ()=>{
             </ul>
         </div>
         </div>
-        <p class="footer-title">about company</p>
-        <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Fuga nam suscipit sed neque assumenda animi ut eligendi reiciendis voluptatibus, tempore,
-            illum provident quisquam. Ipsum nisi unde ex alias earum quidem beatae iusto odit 
-            placeat sint voluptatem, necessitatibus quaerat vel suscipit obcaecati sequi magni vitae?
-            Voluptate dignissimos fugiat sed ullam nostrum cum sapiente accusantium quae quasi sequi
-            labore nihil iusto dolores, obcaecati assumenda praesentium accusamus, quidem facilis 
-            eligendi quia a minima eum perferendis. Quas dolorem id architecto neque nobis adipisci 
-            nesciunt omnis, blanditiis fugit? Reprehenderit dolores deleniti harum, aut nobis quia 
-            dicta quam sint culpa sed vel voluptas! Dolor, exercitationem expedita.
+        <p class="footer-title">Sobre a Clothing</p>
+        <p class="info"> A Clothing foi fundada em 1930 pelo família paulistas Nóbrega.Iniciaram sua primeira loja no centro de São Paulo e hoje somam mais de 150 unidades espalhados pelo Brasil, se despontando como uma das grandes redes de varejo do Brasil.                
+        O sucesso da rede , se a qualidade dos produtos e do empenho em oferecer o melhor atendimento , nas lojas fisícas e online.
         </p>
-        <p class="info">support emails - help@clothing.com, customersupport@clothing.com</p>
-        <p class="info">telephone - +55 11 0000 0000</p>
+        <p class="info">Atendimento emails - ajuda@clothing.com, customersupport@clothing.com</p>
+        <p class="info">telephone - +55 11 545454 00100</p>
         <div class="footer-social-container">
             <div>
-                <a href="#" class="social-link">terms & services</a>
-                <a href="#" class="social-link">privacy page</a>
+                <a href="#" class="social-link">Termos & Serviços</a>
+                <a href="#" class="social-link">Politica de Privacidade</a>
             </div>
+           
+            <div class="social-instagram">
+            <img src="./img/instagram.png" class="instagram" alt=""> 
+            <a href="#" class="social-link">instagram</a>
+            </div>
+
+            <div class="social-facebook">            
+           
+            <img src="./img/facebook.png" class="facebook" alt="">  
+            <a href="#" class="social-link">facebook</a>  
+            </div>
+
+            <div class="social-twitter"> 
+            <img src="./img/twitter.png" class="twitter" alt="">
+            <a href="#" class="social-link">twitter</a>
+            
+            </div>
+
             <div>
-                <a href="#" class="social-link">instagram</a>
-                <a href="#" class="social-link">facebook</a>
-                <a href="#" class="social-link">twitter</a>
+            <p class="formasDePagamentos"></p>
+            <img src="./img/dinner.png" class="dinner" alt="">
+            <img src="./img/visa.png" class="visa" alt="">
+            <img src="./img/pay.png" class="pay" alt="">
+            <img src="./img/amex.png" class="amex" alt="">
+            <img src="./img/barras.png" class="barras" alt="">
+            <img src="./img/mastercard.png" class="mastercard" alt="">
             </div>
+
         </div>
-        <p class="footer-credit">Clothing, best apparels online store</p>
+        <p class="footer-credit">Clothing,a melhor loja para voçê e sua família </p>
     `;
 }
+
 
 createFooter();

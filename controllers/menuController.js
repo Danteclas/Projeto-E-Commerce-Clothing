@@ -2,15 +2,15 @@ const menuController={
   getHomepage:(req,res)=>{
      res.render('index');
   },
- /* getProduct: (req,res)=>{
+    getProduct: (req,res)=>{
     res.render('product')
   },
   getSearch :(req,res)=> {
     res.render('search')
   },
- /* getSearch :(req,res)=> {
-    res.render('404')
-  },*/
+ getSignup : (req,res)=>{
+   res.render('signup')
+ }
 }
 
 module.exports = menuController;
