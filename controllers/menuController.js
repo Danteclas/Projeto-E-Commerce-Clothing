@@ -10,7 +10,15 @@ const menuController={
   },
  getSignup : (req,res)=>{
    res.render('signup')
- }
+ },
+ get404 : (req,res)=>{
+  res.render('404')
+},
+getPainel: (req,res)=>{
+ res.render('painel')
+}
+
+
 }
 
 module.exports = menuController;

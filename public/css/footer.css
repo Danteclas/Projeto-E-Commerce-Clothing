@@ -83,42 +83,62 @@ footer {
     background: rgba(0, 0, 0, 0.2);
 }
 
+.midia-icones {
+    max-width: 400px;
+    display: flex;
+
+}
+
+.midia-icones {
+    max-width: 100px;
+    padding: 20px;
+    float: left;
+    flex-direction: row;
+}
+
+.instagram {
+    max-width: 50px;
+    padding: 5px;
+}
+
+.facebook {
+    max-width: 50px;
+    padding: 5px;
+
+}
+
+.twitter {
+    max-width: 50px;
+    padding: 5px;
+}
+
+.midia-link {
+    max-width: 400px;
+    display: flex;
+    padding: 10px;
+    margin: 30px 10px 20px 20px;
+    float: left;
+
+}
+
+
+
 .social-link {
     color: #fff;
-    margin-left: 20px;
+    margin: 5px;
+    display: flex;
     text-transform: capitalize;
 }
 
-.social-twitter {
-    width: 5px;
-    position: relative;
-    margin: 260px 550px 50px -680px;
-    display: block;
-
-}
-
-
-.social-facebook {
-    width: 5px;
-    position: none;
-    margin: 260px 1000px 20px 10px;
-    display: block;
-
-
-}
-
-.social-instagram {
-    width: 5px;
-    position: absolute;
-    margin: 260px 20px 20px 10px;
-    display: block;
-
-
-}
-
 .formasDePagamentos {
-    width: min-content;
-    position: absolute;
-    margin: 260px 40px 40px 10px;
-    display: block;
+    max-width: 50px;
+    display: flex;
+}
+
+.card-pay img {
+    background-color: rgb(180, 182, 184);
+    width: 60px;
+    margin: 8px;
+    border: 1px solid #fff;
+
 }
