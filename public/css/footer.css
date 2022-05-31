@@ -1,6 +1,7 @@
 footer {
     position: relative;
     width: 100%;
+    max-width: 1082;
     padding: 40px 10vw;
     padding-bottom: 80px;
     background: #383838;
@@ -133,6 +134,7 @@ footer {
 .formasDePagamentos {
     max-width: 50px;
     display: flex;
+
 }
 
 .card-pay img {
