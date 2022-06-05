@@ -4,7 +4,6 @@
 /* HERO */
 .hero-section {
     width: 100%;
-
     height: calc(100vh - 120px);
     background-image: url('../img/header.png');
     background-size: cover;
@@ -215,4 +214,51 @@
 .collection:nth-child(3) {
     grid-column: span 2;
     margin-bottom: 10px;
+}
+
+/* SMARTPHONE */
+@media (min-width:375px) {
+    .hero-section {
+        width: 100%;
+    }
+
+    .product-container {
+        width: 77%;
+        margin-left: 25px;
+    }
+
+    .collection p {
+        width: 96%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        text-align: center;
+        font-size: 17px;
+
+    }
+
+    .product-container {
+        width: 77%;
+        margin-left: 25px;
+    }
+
+    .hero-section .sub-heading {
+        margin-top: 10px;
+        text-align: center;
+        color: #fff;
+        text-transform: none;
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .product-category {
+        padding: 0 10vw;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 40px;
+        text-transform: none;
+    }
+
+
 }

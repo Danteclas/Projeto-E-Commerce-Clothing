@@ -99,3 +99,42 @@
 .link:hover {
     opacity: 1;
 }
+
+/* Smartphones */
+@media (min-width:375px) and (max-width:767px) {
+    .nav {
+        width: 90%;
+        padding: 2px 3vw;
+        flex-direction: row;
+    }
+
+    .brand-logo {
+        height: 38px;
+    }
+
+    .nav-user-cart a {
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin: 5px 155px 5px -250px;
+
+    }
+
+
+
+    .search-box {
+        width: 19%;
+        height: 12%;
+    }
+
+    .search-btn {
+        width: 19%;
+        height: 12%;
+    }
+
+    .link {
+        font-size: 12px;
+    }
+
+}

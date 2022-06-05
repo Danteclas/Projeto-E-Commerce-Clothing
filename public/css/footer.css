@@ -1,7 +1,7 @@
 footer {
     position: relative;
     width: 100%;
-    max-width: 1082;
+
     padding: 40px 10vw;
     padding-bottom: 80px;
     background: #383838;
@@ -132,8 +132,10 @@ footer {
 }
 
 .formasDePagamentos {
-    max-width: 50px;
+    max-width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
 
@@ -143,4 +145,100 @@ footer {
     margin: 8px;
     border: 1px solid #fff;
 
+
+
+}
+
+/* Smartphones */
+@media (min-width:375px) and (max-width:767px) {
+    .footer {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    img.logo {
+        max-width: 125px;
+        max-height: 100px;
+        width: auto;
+        height: auto;
+    }
+
+    p {
+        font-size: 9px;
+    }
+
+    .footer-social-container {
+        font-size: 9px;
+        margin: 10px -20px 20px 15px;
+        padding: 1px;
+        display: flex;
+        justify-content: center;
+    }
+
+    a.social-link {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    .footer-ul-container,
+    li {
+        width: 50%;
+        font-size: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: -5px;
+    }
+
+    .category-title {
+        font-size: 10px;
+
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    .institucional,
+    .info,
+    .footer-title {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    div.card-pay {
+        max-width: 100%;
+        margin: 3px 39px 0px -40px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-pay img {
+        width: 20px;
+        margin: -15px 5px 15px 5px;
+        display: flex;
+        justify-self: center;
+    }
+
+    .midia-icones div {
+        width: 100%;
+        margin: 7px 40px 1px 20px;
+        justify-content: center;
+    }
+
+    .instagram {
+        width: 30px;
+    }
+
+    .facebook {
+        width: 30px;
+    }
+
+    .twitter {
+        width: 30px;
+    }
 }

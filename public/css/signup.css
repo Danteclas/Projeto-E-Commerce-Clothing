@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -14,7 +14,7 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
-.loader{
+.loader {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,7 +23,7 @@ body{
     display: none;
 }
 
-.logo{
+.logo {
     height: 80px;
     display: block;
     margin: 0 auto 50px;
@@ -31,7 +31,7 @@ body{
 
 input[type="text"],
 input[type="password"],
-input[type="email"]{
+input[type="email"] {
     display: block;
     width: 300px;
     height: 40px;
@@ -48,11 +48,11 @@ input[type="email"]{
     font-family: 'roboto', sans-serif;
 }
 
-::placeholder{
+::placeholder {
     color: #383838;
 }
 
-.submit-btn{
+.submit-btn {
     width: 300px;
     height: 40px;
     text-align: center;
@@ -69,7 +69,7 @@ input[type="email"]{
 
 /* CHECKBOX STYLES */
 
-.checkbox{
+.checkbox {
     -webkit-appearance: none;
     position: relative;
     width: 15px;
@@ -80,11 +80,11 @@ input[type="email"]{
     cursor: pointer;
 }
 
-.checkbox:checked{
+.checkbox:checked {
     background: #383838;
 }
 
-.checkbox::after{
+.checkbox::after {
     content: '';
     position: absolute;
     top: 60%;
@@ -99,22 +99,22 @@ input[type="email"]{
     display: none;
 }
 
-.checkbox:checked::after{
+.checkbox:checked::after {
     display: block;
 }
 
-label{
+label {
     display: inline-block;
     margin-bottom: 10px;
     font-size: 14px;
     color: #383838;
 }
 
-label a{
+label a {
     color: #383838;
 }
 
-.link{
+.link {
     color: #383838;
     text-align: center;
     display: block;
@@ -124,7 +124,7 @@ label a{
 
 /* ALERT */
 
-.alert-box{
+.alert-box {
     width: 300px;
     min-height: 150px;
     background: #fff;
@@ -140,23 +140,31 @@ label a{
     transition: 1s;
 }
 
-.alert-box.show{
+.alert-box.show {
     opacity: 1;
     pointer-events: all;
     top: 50%;
 }
 
-.alert-img{
+.alert-img {
     display: block;
     margin: 10px auto 20px;
     height: 60px;
 }
 
-.alert-msg{
+.alert-msg {
     color: #e24c4b;
     font-size: 20px;
     text-transform: capitalize;
     text-align: center;
     line-height: 30px;
     font-weight: 500;
+}
+
+/* Smartphones */
+@media (min-width:375px) and (max-width:767px) {
+    body {
+        width: 80%;
+        margin-left: 35px;
+    }
 }
