@@ -138,10 +138,6 @@
 /* Smartphones */
 @media (min-width:375px) and (max-width:767px) {
 
-    .hero-section {
-        width: 100%;
-
-    }
 
     .product-details {
         width: 100%;
@@ -199,11 +195,10 @@
     .size-radio-btn {
         display: flex;
         flex-direction: row;
-        align-items: right;
-        width: 48px;
-        height: 50px;
+        width: 42px;
+        height: 47px;
         font-size: 21px;
-        margin: 15px 7px 30px -4px;
+        margin: 15px 3px 30px -4px;
         border: 1px solid #383838;
         border-radius: 50%;
         line-height: 78px;
@@ -213,16 +208,17 @@
 
     }
 
-    .size-group {
-        width: 200%;
-        height: 30%;
+    .size-group label {
+        width: 19%;
+        max-height: 1%;
         display: flex;
         flex-direction: row;
-        margin: 25px 9px 8px 5px;
+        align-items: center;
+        margin: 10px -9px 8px 5px;
     }
 
-    .cart-btn {
-        width: 100%;
+    .cart-btnb {
+        width: 90%;
         display: flex;
         justify-items: center;
         background: #383838;
@@ -230,13 +226,14 @@
     }
 
     button.btn {
-        width: 100%;
-        margin-right: 2%;
+        width: 200%;
+        max-height: 5%;
+        margin: 10px 5px;
 
     }
 
     .heading {
-        font-size: 20px;
+        font-size: 10px;
         margin-bottom: 20px;
     }
 
