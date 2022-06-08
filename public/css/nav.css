@@ -103,33 +103,37 @@
 /* Smartphones */
 @media (min-width:375px) and (max-width:767px) {
     .nav {
-        width: 90%;
+        width: 100%;
         padding: 2px 3vw;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .brand-logo {
         height: 38px;
+        width: 80px;
     }
 
     .nav-user-cart a {
-
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
-        margin: 5px 155px 5px -250px;
+        align-items: center;
+        margin: 5px 0px 5px 20px;
 
+    }
+
+    .nav-items a img {
+        width: 20px;
     }
 
 
 
     .search-box {
-        width: 19%;
+        width: 149px;
         height: 12%;
     }
 
     .search-btn {
-        width: 19%;
+        width: 86%;
         height: 12%;
     }
 
