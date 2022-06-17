@@ -8,5 +8,8 @@ menuRouter.get('/product/',menuController.getProduct);
 menuRouter.get('/search/',menuController.getSearch);
 menuRouter.get('/signup/',menuController.getSignup);
 menuRouter.get('/404/',menuController.get404);
-menuRouter.get('/painel/',menuController.getPainel);
+menuRouter.get('/checkout/',menuController.getCheckout);
+menuRouter.get('/cart/',menuController.getCart);
+
+
 module.exports = menuRouter;

@@ -1,0 +1,55 @@
+body {
+  display: block;
+  background: #fff;
+}
+
+.form {
+  width: 100%;
+  padding: 20px 10vw;
+  background-color: #383838;
+
+}
+
+.form input {
+  background: #fff !important;
+  width: 100% !important;
+}
+
+.three-input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.three-input-container input {
+  margin: 0 !important;
+
+}
+
+#state {
+  margin: 0 20px !important;
+
+}
+
+
+
+.heading {
+  text-transform: capitalize;
+  font-size: 500;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.heading,
+.text {
+  color: #fff;
+}
+
+.alert-box {
+  color: aquamarine;
+}
+
+.sm-product-name,
+p {
+  display: flex;
+  margin: -70px 10px 98px 57px;
+}

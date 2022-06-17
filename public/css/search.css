@@ -51,6 +51,10 @@
 
     }
 
+    .product-thumb {
+        margin: 80px 0px 0px;
+    }
+
     .product-card {
         align-items: center;
     }

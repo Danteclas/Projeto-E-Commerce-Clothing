@@ -108,6 +108,15 @@
         flex-direction: column;
     }
 
+    .links-container {
+        width: 133%;
+        display: flex;
+        padding: 10px 10vw;
+        justify-content: center;
+        list-style: none;
+        border-top: 1px solid #d1d1d1;
+    }
+
     .brand-logo {
         height: 38px;
         width: 80px;

@@ -14,11 +14,13 @@ const menuController={
  get404 : (req,res)=>{
   res.render('404')
 },
-getPainel: (req,res)=>{
- res.render('painel')
-}
+getCheckout: (req,res)=>{
+ res.render('checkout')
+},
+getCart: (req,res)=>{
+  res.render('cart')
 
-
+},
 }
 
 module.exports = menuController;
