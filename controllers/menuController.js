@@ -21,6 +21,18 @@ getCart: (req,res)=>{
   res.render('cart')
 
 },
+getLogin: (req,res)=>{
+  res.render('login')
+
+},
+getSeller: (req,res)=>{
+  res.render('seller')
+
+},
+getaddProduct: (req,res)=>{
+  res.render('addProduct')
+
+},
 }
 
 module.exports = menuController;

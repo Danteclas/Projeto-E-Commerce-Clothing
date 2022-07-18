@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "clear": "^0.1.0",
+    "dotenv": "^16.0.1",
     "ejs": "^3.1.7",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^2.3.3",

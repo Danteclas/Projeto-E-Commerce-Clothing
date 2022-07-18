@@ -1,51 +1,67 @@
+
+
 const loader = document.querySelector('.loader');
 
 //selecionar inputs
 const submitBtn = document.querySelector('.submit-btn');
-const nome = document.querySelector('#nome');
+const name = document.querySelector('#name') || null ;
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
-const numero = document.querySelector('#numero');
-const tac = document.querySelector('#terms-and-cond');
-const notification = document.querySelector('#notification');
+const number = document.querySelector('#number') || null ;
+const tac = document.querySelector('#terms-and-cond') || null ;
+const notification = document.querySelector('#notification') || null ;
 
 submitBtn.addEventListener('click', ()=>{
-    if(nome.value.length < 3){
-        showAlert('Nome precisa ter ao menos 3 letras');
+    if(name != null){ //signup page
+    if(name.value.length < 3){
+      showAlert('Nome precisa ter ao menos 3 letras');
     }else if(!email.value.length){
         showAlert('Por favor, coloque o seu email');
     }else if(password.value.length < 8){
         showAlert('A senha precisa de ao menos 8 caracteres');
-    }else if(!numero.value.length){
+    }else if(!number.value.length){
         showAlert('Por favor, coloque o seu celular');
-    }else if(!Number(numero.value) || numero.value.length < 9){
+   }else if(!Number(number.value) || number.value.length < 9){
         showAlert('Número inválido, por favor, adicione um número de celular válido!');
-    }else if(!tac.checked){
+   }else if(!tac.checked){
         showAlert('Você precisa aceitar os nossos termos e condições para continuar');
     }else{
         //submit form
         loader.style.display = 'block';
         sendData('/signup', {
-            nome: nome.value,
-            email: email.value,
+            name: name.value,
+            email: email.value, 
             password: password.value,
-            numero: numero.value,
+            number: number.value, 
             tac: tac.checked,
             notification: notification.checked,
             seller: false
         })
-    }
-})
+   } 
+    }//else {
+        //login page
+       // if(!email.value.length || !password.value.length){
+         //   showAlert('Preencher todos os campos');
+        //}else{  loader.style.display = 'block';
+        //sendData('/login', {
+          //  email: email.value, 
+            //password: password.value,
+            
+        //})
 
-//function de enviar dados
-const sendData = (path, data) => {
+//        }
+  //  }
+});
+
+//function de enviar dados 
+const sendData = (path, data) =>  {
     fetch(path, {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(data)
     }).then((res) => res.json())
     .then(response => {
-        processData(response);
+       processData(response);
     })
 }
 
