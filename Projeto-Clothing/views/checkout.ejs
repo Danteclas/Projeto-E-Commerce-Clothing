@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing :checkout</title>
+
+  <link rel="stylesheet" href="css/signup.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/checkout.css">
+ 
+
+</head>
+<body> 
+   
+<nav class="navbar"></nav>
+
+<div class = "alert-box" >
+  <img src="img/error.png" class ="alert-img" alt="">
+<p class="alert-msg"></p>
+</div>
+<div class="form">
+  <h1 class="heading">Finalização de compras</h1>
+  <p class="text">Digite o endereço para entrega</p>
+  
+  <input type="text" id="Rua N°" placeholder="Rua:       ,N° ">
+  <input type="text" id="Bairro" placeholder="Bairro:">
+  <div class="three-input-container">
+    <input type="text" id="Cidade" placeholder="Cidade:">
+    <input type="text" id="CEP" placeholder="CEP:">
+  <input type="text" id="Estado" placeholder="Estado:">
+  </div>
+  <div class="cart-section">
+    <div class="product-list">
+        <p class="section-heading">Seu Carrinho</p>
+        <div class="cart">
+            
+        </div>
+    </div>
+    <div class="checkout-section">
+        <div class="checkout-box">
+            <p class="text">Sua fatura,</p>
+            <h1 class="bill">R$0,00</h1>
+            <button class="place-order-btn">Faça sua Compra</button>
+        </div>
+
+  
+</div>
+
+
+  <script src="js/home.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/token.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>  
