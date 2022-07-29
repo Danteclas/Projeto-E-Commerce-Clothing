@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'produto_id'
     })
 
-    Carrinho.belongsTo(models.Users, {
+    Carrinho.belongsTo(models.Usuarios, {
       constraint: true,
       foreignKey: 'usuario_id'
     })

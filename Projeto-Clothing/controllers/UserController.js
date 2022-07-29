@@ -1,4 +1,4 @@
-const { Users } = require('../models');
+const { Usuarios } = require('../models');
 
 const UsersController = {
   renderUser: (req, res) => {
@@ -6,10 +6,12 @@ const UsersController = {
 
   },
   index: (req, res) => {
-    Users.findAll()
+    Usuarios.findAll()
       .then(users => {
         console.log(users)
       })
+
+    return res.send('Ok')
   }
 }
 

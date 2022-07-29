@@ -2,9 +2,12 @@
   "development": {
     "username": "root",
     "password": "818250",
-    "database": "Projeto_Integrador",
+    "database": "DER_ProjetoIntegrador",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "timestamps": false
+    }
   },
   "test": {
     "username": "root",

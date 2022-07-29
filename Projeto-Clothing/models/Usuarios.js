@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Users = sequelize.define('Users', {
-    id: {
+  const Usuarios = sequelize.define('Usuarios', {
+    id_usuario: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -46,19 +46,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    type: {
-      type: DataTypes.ENUM,
-      values: ['user', 'admin'],
-      allowNull: false
-    }
-  }, { tablename: 'users', timeStamp: true })
+  }, { tablename: 'usuarios' })
 
-  Users.associate = (models) => {
-    Users.belongsTo(models.Carrinho, {
+  Usuarios.associate = (models) => {
+    Usuarios.belongsTo(models.Carrinho, {
       constraint: true,
       foreignKey: 'carrinho_produto_id'
     })
   }
 
-  return Users;
+  return Usuarios;
 }
