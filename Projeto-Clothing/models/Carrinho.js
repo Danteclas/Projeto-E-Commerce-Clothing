@@ -10,27 +10,21 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-
+    //configurar as relações
 
   }, { tablename: 'carrinho' })
 
   Carrinho.associate = (models) => {
-    Carrinho.belongsTo(models.Product, {
+    Carrinho.belongsTo(models.Produtos, {
       constraint: true,
       foreignKey: 'produto_id'
-    })
+    }),
 
-    Carrinho.belongsTo(models.Usuarios, {
-      constraint: true,
-      foreignKey: 'usuario_id'
-    })
-  }/*
-   Carrinho.associate = (models) => {
-     Carrinho.belongsTo(models.User, {
-       constraint: true,
-       foreignKey: 'usuario_id'
-     })
-   }*/
-  return Carrinho
+      Carrinho.belongsTo(models.Usuarios, {
+        constraint: true,
+        foreignKey: 'usuario_id'
+      })
+  }
+  return Carrinho;
 }
 

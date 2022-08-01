@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Product = sequelize.define('Product', {
+  const Produtos = sequelize.define('Produtos', {
     produto_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -28,35 +28,34 @@ module.exports = (sequelize, DataTypes) => {
     },
     preco: {
       type: DataTypes.FLOAT,
-      allowNull: true
+      allowNull: false
     },
     preco_oferta: {
       type: DataTypes.FLOAT,
-      allowNull: false
-    },
+      allowNull: true
+    }
 
+  }, { tablename: 'produtos' })
 
-  }, { tablename: 'product' })
-
-  Product.associate = (models) => {
-    Product.belongsTo(models.Carrinho, {
+  Produtos.associate = (models) => {
+    Produtos.belongsTo(models.Carrinho, {
       constraint: true,
       foreignKey: 'carrinho_produto_id',
     })
   }
-  Product.associate = (models) => {
-    Product.belongsTo(models.Fabricante, {
+  Produtos.associate = (models) => {
+    Produtos.belongsTo(models.Fabricante, {
       constraint: true,
       foreignKey: 'fabricante_id_fabricante',
     })
   }
-  Product.associate = (models) => {
-    Product.belongsTo(models.Carrinho, {
+  Produtos.associate = (models) => {
+    Produtos.belongsTo(models.Estoque, {
       constraint: true,
-      foreignKey: 'estoque_id_estoque',
+      foreignKey: 'estoque_estoque_id',
     })
   }
 
-  return Product
+  return Produtos;
 }
 

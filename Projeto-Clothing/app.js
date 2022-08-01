@@ -2,9 +2,15 @@ const express = require('express');
 const path = require('path');
 const routes = require('./routes');
 const app = express();
-const usersRouter = require('./routes/UserRoutes')
+
+//Rotas banco de dados
+const usersRouter = require('./routes/UserRoutes');
+const ProdutoRouter = require('./routes/ProdutoRoutes');
+const CarrinhoRouter = require('./routes/CarrinhoRoutes');
+const EstoqueRouter = require('./routes/EstoqueRoutes');
+const FabricanteRouter = require('./routes/FabricanteRoutes');
 //const bcrypt = require("bcrypt");
-/*const db = require('/Users/danielfranca/Project-E-Commerce-Clothing/database/models/db.js');*/
+
 let staticPath = path.join(__dirname, "public");
 
 //const logMiddleware = require('./middlewares/logSite');
@@ -21,6 +27,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use('/', routes);
 app.use(usersRouter);
+app.use(ProdutoRouter);
+app.use(CarrinhoRouter);
+app.use(EstoqueRouter);
+app.use(FabricanteRouter);
 
 /*pp.use('Users', (req, res) => {
   res.sendFile(path.join(staticPath, "Users.js"))
@@ -82,7 +92,7 @@ app.post('/login', (req, res) => {
 })
 
 //add product 
-app.get('/add-product', (req, res) => {
+/* app.get('/add-product', (req, res) => {
   res.sendFile(path.join(staticPath, "/add-product.ejs"))
 });
 app.get('/products/:id', (req, res) => {
@@ -93,7 +103,7 @@ app.get('/search/:key', (req, res) => {
 })
 app.get('/cart', (req, res) => {
   res.sendFile(path.join(staticPath, 'cart.ejs'))
-})
+}) */
 
 // 404 route
 app.use('404', (req, res) => {

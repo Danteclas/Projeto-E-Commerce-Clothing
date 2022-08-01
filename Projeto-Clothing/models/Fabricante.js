@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   }, { tablename: 'fabricante' })
 
   Fabricante.associate = (models) => {
-    Fabricante.belongsTo(models.Carrinho, {
+    Fabricante.belongsTo(models.Produtos, {
       constraint: true,
       foreignKey: 'produto_id',
     })

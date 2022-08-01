@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Estoque = sequelize.define('Estoque', {
-    id_fabricante: {
+
+    estoque_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -8,18 +9,18 @@ module.exports = (sequelize, DataTypes) => {
     },
     qtd_total_estoque: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
 
 
   }, { tablename: 'estoque' })
-  Estoque.associate = (models) => {
-    Estoque.belongsTo(models.Carrinho, {
-      constraint: true,
-      foreignKey: 'produto_id',
-    })
-  }
-
-  return Estoque
+  /*  Estoque.associate = (models) => {
+     Estoque.belongsTo(models.Carrinho, {
+       constraint: true,
+       foreignKey: 'carrinho_produto_id',
+     })
+   }
+  */
+  return Estoque;
 }
 

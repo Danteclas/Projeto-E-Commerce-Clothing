@@ -1,4 +1,4 @@
-// create small product cards
+/* // create small product cards
 const createSmallCards = (data) => {
     return `
     <div class="sm-product">
@@ -23,12 +23,12 @@ let totalBill = 0;
 const setProducts = (name) => {
     const element = document.querySelector(`.${name}`);
     let data = JSON.parse(localStorage.getItem(name));
-    if(data == null){
+    if (data == null) {
         element.innerHTML = `<img src="img/empty-cart.png" class="empty-img" alt="">`;
-    } else{
-        for(let i = 0; i < data.length; i++){
+    } else {
+        for (let i = 0; i < data.length; i++) {
             element.innerHTML += createSmallCards(data[i]);
-            if(name == 'cart'){
+            if (name == 'cart') {
                 totalBill += Number(data[i].sellPrice * data[i].item);
             }
             updateBill();
@@ -57,21 +57,21 @@ const setupEvents = (name) => {
         let cost = Number(price[i].getAttribute('data-price'));
 
         counterMinus[i].addEventListener('click', () => {
-            if(item.innerHTML > 1){
+            if (item.innerHTML > 1) {
                 item.innerHTML--;
                 totalBill -= cost;
                 price[i].innerHTML = `$${item.innerHTML * cost}`;
-                if(name == 'cart'){ updateBill() }                
+                if (name == 'cart') { updateBill() }
                 product[i].item = item.innerHTML;
                 localStorage.setItem(name, JSON.stringify(product));
             }
         })
         counterPlus[i].addEventListener('click', () => {
-            if(item.innerHTML < 9){
+            if (item.innerHTML < 9) {
                 item.innerHTML++;
                 totalBill += cost;
-                price[i].innerHTML = `$${item.innerHTML * cost}`                
-                if(name == 'cart'){ updateBill() } 
+                price[i].innerHTML = `$${item.innerHTML * cost}`
+                if (name == 'cart') { updateBill() }
                 product[i].item = item.innerHTML;
                 localStorage.setItem(name, JSON.stringify(product));
             }
@@ -80,7 +80,7 @@ const setupEvents = (name) => {
 
     deleteBtn.forEach((item, i) => {
         item.addEventListener('click', () => {
-            product = product.filter((data, index) =>  index != i);
+            product = product.filter((data, index) => index != i);
             localStorage.setItem(name, JSON.stringify(product));
             location.reload();
         })
@@ -88,4 +88,4 @@ const setupEvents = (name) => {
 }
 
 setProducts('cart');
-setProducts('wishlist');
+//setProducts('wishlist');  */
