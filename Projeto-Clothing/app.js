@@ -1,109 +1,39 @@
 const express = require('express');
 const path = require('path');
+const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 const app = express();
+const methodOverride = require('method-override')
 
 //Rotas banco de dados
-const usersRouter = require('./routes/UserRoutes');
+/* const usersRouter = require('./routes/UserRoutes'); */
 const ProdutoRouter = require('./routes/ProdutoRoutes');
 const CarrinhoRouter = require('./routes/CarrinhoRoutes');
 const EstoqueRouter = require('./routes/EstoqueRoutes');
 const FabricanteRouter = require('./routes/FabricanteRoutes');
-//const bcrypt = require("bcrypt");
+const RegisterRouter = require('./routes/RegisterRoutes');
+const LoginRouter = require('./routes/LoginRoutes');
+
 
 let staticPath = path.join(__dirname, "public");
 
-//const logMiddleware = require('./middlewares/logSite');
-//config do EJS no express
-app.set('view engine', 'ejs');
-//Definido a pasta de views para configuração no Express.
-app.set('views', path.join(__dirname, 'views'));
-//Configuração para o JSON no EXpress.
-app.use(express.static(staticPath));
 app.use(express.json());
-//Configuração de arquivos estáticos (public) 
-app.use(express.static(path.join(__dirname, 'public')));
-//ir para o Controller (MVC).
-app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(methodOverride("_method"));
+
+
 app.use('/', routes);
-app.use(usersRouter);
 app.use(ProdutoRouter);
 app.use(CarrinhoRouter);
 app.use(EstoqueRouter);
 app.use(FabricanteRouter);
-
-/*pp.use('Users', (req, res) => {
-  res.sendFile(path.join(staticPath, "Users.js"))
-})
-app.use((req, res) => {
-  res.redirect("/Users");
-//})*/
-
-
-//log de Middleware.
-//app.use(logMiddleware); 
-
-
-//signup route
-app.get('/signup', (req, res) => {
-  res.sendFile(path.join(staticPath, "signup.ejs"))
-})
-app.post('/signup/', (req, res) => {
-  let { name, email, password, number, tac, notification } = req.body;
-  //validação form
-  if (name.lenght < 3) {
-    return res.json({ 'alert': 'O nome precisa ter ao menos 3 letras' });
-  } else if (!email.length) {
-    return res.json({ 'alert': 'Por favor, coloque o seu email' });
-  } else if (password.length < 8) {
-    return res.json({ 'alert': 'A senha precisa de ao menos 8 caracteres' });
-  } else if (!number.length) {
-    return res.json({ 'alert': 'Por favor, coloque o seu celular' });
-  } else if (!Number(number) || number.length < 9) {
-    return res.json({ 'alert': 'Número inválido, por favor, adicione um número de celular válido!' });
-  } else if (!tac) {
-    return res.json({ 'alert': 'Você precisa aceitar os nossos termos e condições para continuar' });
-  }
-})
-
-
-//login route
-app.get('/login', (req, res) => {
-  res.sendFile(path.join(staticPath, "login.ejs"));
-})
-app.post('/login', (req, res) => {
-  let { email, password } = req.body;
-  if (!email.lenght || !password.lenght) {
-    return res.json({ 'alert': 'Preencher todos os campos' })
-  } else {
-    bcrypt.compare(password, user.data().password, (err, result) => {
-      if (result) {
-        let data = user.data();
-        return res.json({
-          name: data.name,
-          email: data.email,
-          seller: data.seller,
-        })
-      } else {
-        ;
-      }
-    })
-  }
-})
-
-//add product 
-/* app.get('/add-product', (req, res) => {
-  res.sendFile(path.join(staticPath, "/add-product.ejs"))
-});
-app.get('/products/:id', (req, res) => {
-  res.sendFile(path.join(staticPath, 'produtct.ejs'))
-})
-app.get('/search/:key', (req, res) => {
-  res.sendFile(path.join(staticPath, 'search.ejs'))
-})
-app.get('/cart', (req, res) => {
-  res.sendFile(path.join(staticPath, 'cart.ejs'))
-}) */
+app.use(RegisterRouter);
+/* app.use(LoginRouter); */
+/* informações do formulário para o req.bod */
+app.use(cookieParser());
 
 // 404 route
 app.use('404', (req, res) => {

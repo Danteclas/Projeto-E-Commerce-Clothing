@@ -163,7 +163,7 @@ label a {
     font-weight: 500;
 }
 
-/* Smartphones */
+/* Smartphones Responsive */
 @media (min-width:375px) and (max-width:767px) {
     body {
         width: 80%;

@@ -32,9 +32,9 @@ const setData = (data) => {
 
     // setup the images
     productImages.forEach((img, i) => {
-        if(data.images[i]){
+        if (data.images[i]) {
             img.src = data.images[i];
-        } else{
+        } else {
             img.style.display = 'none';
         }
     })
@@ -42,7 +42,7 @@ const setData = (data) => {
 
     // setup size buttons
     sizeBtns.forEach(item => {
-        if(!data.sizes.includes(item.innerHTML)){
+        if (!data.sizes.includes(item.innerHTML)) {
             item.style.display = 'none';
         }
     })
@@ -79,23 +79,23 @@ const setData = (data) => {
 
 // fetch data
 const fetchProductData = () => {
-    fetch('/get-products', {
+    fetch('/get-product', {
         method: 'post',
         headers: new Headers({ 'Content-Type': 'application/json' }),
-        body: JSON.stringify({id: productId})
+        body: JSON.stringify({ id: productId })
     })
-    .then(res => res.json())
-    .then(data => {
-        setData(data);
-        getProducts(data.tags[1]).then(data => createProductSlider(data, '.container-for-card-slider', 'similar products'))
-    })
-    .catch(err => {
-        location.replace('/404');
-    })
+        .then(res => res.json())
+        .then(data => {
+            setData(data);
+            getProducts(data.tags[1]).then(data => createProductSlider(data, '.container-for-card-slider', 'similar products'))
+        })
+        .catch(err => {
+            location.replace('/404');
+        })
 }
 
 let productId = null;
-if(location.pathname != '/products'){
+if (location.pathname != '/product') {
     productId = decodeURI(location.pathname.split('/').pop());
     fetchProductData();
 }

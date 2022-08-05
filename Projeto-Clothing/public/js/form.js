@@ -1,8 +1,8 @@
-// redirect to home page if user logged in
+/* // redirect to home page if user logged in
 window.onload = () => {
-    if(sessionStorage.user){
+    if (sessionStorage.user) {
         user = JSON.parse(sessionStorage.user);
-        if(compareToken(user.authToken, user.email)){
+        if (compareToken(user.authToken, user.email)) {
             location.replace('/');
         }
     }
@@ -20,20 +20,20 @@ const tac = document.querySelector('#terms-and-cond') || null;
 const notification = document.querySelector('#notification') || null;
 
 submitBtn.addEventListener('click', () => {
-    if(name != null){ // sign up page
-        if(name.value.length < 3){
+    if (name != null) { // sign up page
+        if (name.value.length < 3) {
             showAlert('name must be 3 letters long');
-        } else if(!email.value.length){
+        } else if (!email.value.length) {
             showAlert('enter your email');
-        } else if(password.value.length < 8){
+        } else if (password.value.length < 8) {
             showAlert('password should be 8 letters long');
-        } else if(!number.value.length){
+        } else if (!number.value.length) {
             showAlert('enter your phone number');
-        } else if(!Number(number.value) || number.value.length < 10){
+        } else if (!Number(number.value) || number.value.length < 10) {
             showAlert('invalid number, please enter valid one');
-        } else if(!tac.checked){
+        } else if (!tac.checked) {
             showAlert('you must agree to our terms and conditions');
-        } else{
+        } else {
             // submit form
             loader.style.display = 'block';
             sendData('/signup', {
@@ -46,11 +46,11 @@ submitBtn.addEventListener('click', () => {
                 seller: false
             })
         }
-    } else{
+    } else {
         // login page
-        if(!email.value.length || !password.value.length){
+        if (!email.value.length || !password.value.length) {
             showAlert('fill all the inputs');
-        } else{
+        } else {
             loader.style.display = 'block';
             sendData('/login', {
                 email: email.value,
@@ -59,3 +59,4 @@ submitBtn.addEventListener('click', () => {
         }
     }
 })
+ */

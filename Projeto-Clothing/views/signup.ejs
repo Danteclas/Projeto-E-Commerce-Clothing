@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
 
     <link rel="stylesheet" href="css/signup.css">
 </head>
+
 <body>
-  
-    
-    
+
+
+
     <img src="img/loader.gif" class="loader" alt="">
 
     <div class="alert-box">
@@ -20,24 +22,28 @@
     </div>
 
     <div class="container">
-        <img src="img/dark-logo.png" class="logo" alt="">
-        <div>
-            <input type="text" autocomplete="off" id="name" placeholder="nome">
-            <input type="email" autocomplete="off" id="email" placeholder="email">
-            <input type="password" autocomplete="off" id="password" 
-            placeholder="senha">
-            <input type="text" autocomplete="off" id="number" placeholder="numero telefone">
-            <input type="checkbox" checked class="checkbox" id="terms-and-cond">
-            <label for="terms-and-cond">Concorda com os nossos <a href="">termos e 
-            condições</a></label><br>
-            <input type="checkbox" class="checkbox" id="notification">
-            <label for="notification">Receber as nossas ofertas e emails</label>
-            <button class="submit-btn">Criar Conta</button>
-        </div>
-        <a href="/login" class="link">Já tem uma conta? Faça o log aqui</a>
+        <form action="/signup" method="POST">
+            <img src="img/dark-logo.png" class="logo" alt="">
+            <div>
+                <input type="text" autocomplete="off" name="nome" id="name" placeholder="digite seu nome">
+                <input type="email" autocomplete="off" name="email" id="email" placeholder="digite seu email">
+                <input type="number" autocomplete="off" name="cpf" id="CPF" placeholder="digite seu CPF">
+                <input type="password" autocomplete="off" name="password" id="password" placeholder="senha">
+
+                <input type="checkbox" checked class="checkbox" id="terms-and-cond">
+                <label for="terms-and-cond">Concorda com os nossos <a href="">termos e
+                        condições</a></label><br>
+                <input type="checkbox" class="checkbox" id="notification">
+                <label for="notification">Receber as nossas ofertas e emails</label>
+                <button class="submit-btn">Criar Conta</button>
+
+        </form>
     </div>
-   
+    <a href="/login" class="link">Já tem uma conta? Faça o log aqui</a>
+    </div>
+
     <script src="js/form.js"></script>
-    
+
 </body>
+
 </html>

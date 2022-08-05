@@ -1,4 +1,4 @@
-const { Usuarios } = require('../models');
+/* const { Usuarios } = require('../models');
 
 const UsersController = {
   renderUser: (req, res) => {
@@ -17,3 +17,4 @@ const UsersController = {
 
 module.exports = UsersController;
 
+ */

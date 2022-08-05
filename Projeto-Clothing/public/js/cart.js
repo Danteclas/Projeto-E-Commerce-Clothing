@@ -1,4 +1,4 @@
-/* // create small product cards
+// create small product cards
 const createSmallCards = (data) => {
     return `
     <div class="sm-product">
@@ -31,17 +31,19 @@ const setProducts = (name) => {
             if (name == 'cart') {
                 totalBill += Number(data[i].sellPrice * data[i].item);
             }
-            updateBill();
+
         }
+        let billPrice = document.querySelector('.bill');
+        billPrice.innerHTML = `$${totalBill}`;
+
     }
 
-    setupEvents(name);
+
 }
 
-const updateBill = () => {
-    let billPrice = document.querySelector('.bill');
-    billPrice.innerHTML = `$${totalBill}`;
-}
+
+
+
 
 const setupEvents = (name) => {
     // setup counter event
@@ -71,7 +73,7 @@ const setupEvents = (name) => {
                 item.innerHTML++;
                 totalBill += cost;
                 price[i].innerHTML = `$${item.innerHTML * cost}`
-                if (name == 'cart') { updateBill() }
+                updateBill();
                 product[i].item = item.innerHTML;
                 localStorage.setItem(name, JSON.stringify(product));
             }
@@ -88,4 +90,4 @@ const setupEvents = (name) => {
 }
 
 setProducts('cart');
-//setProducts('wishlist');  */
+setProducts('wishlist');  

@@ -1,4 +1,4 @@
-let loader = document.querySelector('.loader');
+/* let loader = document.querySelector('.loader');
 let user = JSON.parse(sessionStorage.user || null);
 
 const becomeSellerElement = document.querySelector('.become-seller');
@@ -75,4 +75,4 @@ const setupProducts = () => {
             data.forEach(product => createProduct(product));
         }
     });
-}
+} */

@@ -18,16 +18,16 @@ const createNav = () => {
                     <button class="btn" id="user-btn">Sair</button>
                 </div>            
             </a>            
-            <a href= "#"><img src="./img/cart.png" alt=""></a>
+            <a href= "/cart"><img src="./img/cart.png" alt=""></a>
             
         </div>
     </div>
     <ul class="links-container">
-        <li class="link-item"><a href="#" class="link">Início</a></li>
-        <li class="link-item"><a href="#" class="link">Feminino</a></li>
-        <li class="link-item"><a href="#" class="link">Masculino</a></li>
-        <li class="link-item"><a href="#" class="link">Infantil</a></li>
-        <li class="link-item"><a href="#" class="link">Acessórios</a></li>
+        <li class="link-item"><a href="home" class="link">Inicio</a></li>
+        <li class="link-item"><a href="search" class="link">Feminino</a></li>
+        <li class="link-item"><a href="search" class="link">Masculino</a></li>
+        <li class="link-item"><a href="search" class="link">Infantil</a></li>
+        <li class="link-item"><a href="search" class="link">Acessórios</a></li>
     </ul>
     `;
 }
@@ -52,5 +52,17 @@ window.onload = () => {
 
   } else {
     //user is logget out
+    popuptext.innerHTML = 'Faça seu login ou cadastre-se';
+    actionBtn.innerHTML = 'log in';
+    actionBtn.addEventListener('click', () => {
+      location.href = '/login';
+    })
   }
 }
+const searchBtn = document.querySelector('.search-btn');
+const searchBox = document.querySelector('.search-box');
+searchBtn.addEventListener('click', () => {
+  if (searchBox.value.length) {
+    location.href = `/search/${searchBox.value}`
+  }
+})

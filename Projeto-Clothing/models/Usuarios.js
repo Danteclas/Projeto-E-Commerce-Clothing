@@ -22,12 +22,12 @@ module.exports = (sequelize, DataTypes) => {
 
     telefone: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
 
     foto: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     admin: {
       type: DataTypes.BOOLEAN,
@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     data_criacao: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     },
 
     carrinho_produto_id: {
