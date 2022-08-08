@@ -1,35 +1,43 @@
-/* 
-const { Users } = require('../database/models');
+
+const { Usuarios } = require('../models');
 const bcrypt = require('bcrypt');
 
-const loginController = {
+const LoginController = {
   renderLogin: (req, res) => {
     res.render('login');
   },
   loginUser: (req, res) => {
     const { email, password } = req.body;
 
-    Users.findOne({
+
+
+    Usuarios.findOne({
       where: {
         email,
       },
     }).then(user => {
+      const userExists = bcrypt.compare(password, user.password)//password cadastrado no db.
 
-      if (!user) {
-        alert('Usuario não existe');
+      if (userExists) {// redirecionar para a roda de login novamente.
+        /* ShowAlert('Usuario não existe');
+      } */
+        res.redirect('/#');
+      }
+
+      // se der true a comparacao, então joga o usuario para a home da aplicacao 
+
+      else {
+
         res.redirect('/login');
       }
 
-      if (bcrypt.compareSync(password, user.password)) {
-        res.cookie('user', JSON.stringify({ id: user.id, nome: user.nome, type: user.type }));
 
-        res.redirect('/login');
-      }
+    }
 
-      res.render('/login');
-    }).catch(error => console.log(error));
+    ).catch(error => console.log(error));
   }
+
 }
 
-module.exports = loginController;
- */
+
+module.exports = LoginController;

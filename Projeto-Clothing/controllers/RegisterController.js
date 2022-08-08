@@ -8,7 +8,7 @@ const registerController = {
   index: (req, res) => {
     const { nome, email, cpf, password } = req.body;
     console.log(req.body)
-    //console.log({ nome, email, password, cpf })
+
 
     const passwordHash = bcrypt.hashSync(password, 10);
 
@@ -17,10 +17,12 @@ const registerController = {
       email,
       cpf,
       password: passwordHash,
+      admin: false,
     }).then(() => {
       res.redirect('/signup');
     }).catch(error => res.send(error))
   }
+
 }
 
 module.exports = registerController; 

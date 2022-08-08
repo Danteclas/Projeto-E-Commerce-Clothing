@@ -31,7 +31,7 @@ app.use(CarrinhoRouter);
 app.use(EstoqueRouter);
 app.use(FabricanteRouter);
 app.use(RegisterRouter);
-/* app.use(LoginRouter); */
+app.use(LoginRouter);
 /* informações do formulário para o req.bod */
 app.use(cookieParser());
 
