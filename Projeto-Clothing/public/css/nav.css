@@ -217,10 +217,17 @@ a {
 
     }
 
-    .nav-items a img {
-        width: 20px;
+    .nav-items {
+        display: block;
+        align-items: center;
     }
 
+
+    .nav-items a img {
+        width: 30px;
+        margin: -1px 5px 1px 236px;
+        cursor: pointer;
+    }
 
 
     .search-box {
@@ -229,8 +236,18 @@ a {
     }
 
     .search-btn {
-        width: 86%;
-        height: 12%;
+        width: 17%;
+        height: 40px;
+        padding: 10px 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: #383838;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 15px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     .link {

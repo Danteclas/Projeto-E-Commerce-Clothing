@@ -1,4 +1,4 @@
-
+/* 
 
 const verificarUser = (req, res, next) => {
   if (!req.cookies.user) {
@@ -10,4 +10,4 @@ const verificarUser = (req, res, next) => {
 
 }
 
-module.exports = verificarUser
+module.exports = verificarUser */

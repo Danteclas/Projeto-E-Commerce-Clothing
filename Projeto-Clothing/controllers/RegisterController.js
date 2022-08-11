@@ -6,7 +6,7 @@ const registerController = {
     res.render('register');
   },
   index: (req, res) => {
-    const { nome, email, cpf, password } = req.body;
+    const { nome, email, cpf, password, telefone } = req.body;
     console.log(req.body)
 
 
@@ -17,12 +17,14 @@ const registerController = {
       email,
       cpf,
       password: passwordHash,
+      telefone,
       admin: false,
     }).then(() => {
-      res.redirect('/signup');
+      res.redirect('/login');
     }).catch(error => res.send(error))
   }
 
 }
+
 
 module.exports = registerController; 

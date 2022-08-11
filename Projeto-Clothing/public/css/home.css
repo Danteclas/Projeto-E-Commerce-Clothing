@@ -22,7 +22,7 @@
     margin-top: 10px;
     text-align: center;
     color: #fff;
-    text-transform: capitalize;
+    text-transform: none;
     font-size: 35px;
     font-weight: 300;
 }
@@ -41,7 +41,7 @@
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .product-container {
@@ -83,7 +83,7 @@
     color: #ff7d7d;
     right: 10px;
     top: 10px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .card-btn {
@@ -93,7 +93,7 @@
     transform: translateX(-50%);
     padding: 10px;
     width: 90%;
-    text-transform: capitalize;
+    text-transform: none;
     border: none;
     outline: none;
     background: #fff;

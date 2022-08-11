@@ -43,12 +43,32 @@ textarea {
     border: 2px solid #383838;
     outline: none;
     margin: 20px 0;
-    text-transform: capitalize;
+    text-transform: none;
     color: #383838;
     font-size: 14px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
     font-family: 'roboto', sans-serif;
+
 }
+
+form {
+    animation: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 
 ::placeholder {
     color: #383838;
@@ -67,6 +87,14 @@ textarea {
     cursor: pointer;
     display: block;
     margin: 30px 0;
+    opacity: 1;
+}
+
+.submit-btn:hover {
+    background-color: rgb(174, 137, 137);
+    color: #fff;
+    transition: background-color 1s;
+
 }
 
 /* CHECKBOX STYLES */
@@ -162,6 +190,8 @@ label a {
     line-height: 30px;
     font-weight: 500;
 }
+
+
 
 /* Smartphones Responsive */
 @media (min-width:375px) and (max-width:767px) {

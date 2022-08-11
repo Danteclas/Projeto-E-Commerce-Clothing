@@ -73,29 +73,8 @@ const setData = (data) => {
 
     const cartBtn = document.querySelector('.cart-btn');
     cartBtn.addEventListener('click', () => {
-        cartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data);
-    })
-}
+        /*   cartBtn.innerHTML = add_product_to_cart_or_wishlist('/cart', data); */
+        window.location.href = "/cart";
 
-// fetch data
-const fetchProductData = () => {
-    fetch('/get-product', {
-        method: 'post',
-        headers: new Headers({ 'Content-Type': 'application/json' }),
-        body: JSON.stringify({ id: productId })
     })
-        .then(res => res.json())
-        .then(data => {
-            setData(data);
-            getProducts(data.tags[1]).then(data => createProductSlider(data, '.container-for-card-slider', 'similar products'))
-        })
-        .catch(err => {
-            location.replace('/404');
-        })
-}
-
-let productId = null;
-if (location.pathname != '/product') {
-    productId = decodeURI(location.pathname.split('/').pop());
-    fetchProductData();
 }

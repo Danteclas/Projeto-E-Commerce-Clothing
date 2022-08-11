@@ -19,16 +19,17 @@ const LoginController = {
       const userExists = bcrypt.compare(password, user.password)//password cadastrado no db.
 
       if (userExists) {// redirecionar para a roda de login novamente.
-        /* ShowAlert('Usuario não existe');
-      } */
-        res.redirect('/#');
+
+
+
+        res.redirect('/#')
       }
 
       // se der true a comparacao, então joga o usuario para a home da aplicacao 
 
-      else {
 
-        res.redirect('/login');
+      if (!userExists) {
+        res.redirect('/signup')
       }
 
 
