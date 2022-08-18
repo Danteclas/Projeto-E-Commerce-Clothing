@@ -89,5 +89,6 @@ const setupEvents = (name) => {
     })
 }
 
-/* setProducts('cart'); */
-setProducts('wishlist');  
+setProducts('wishlist');
+setupEvents('cart');
+

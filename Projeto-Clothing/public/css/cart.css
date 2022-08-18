@@ -128,13 +128,23 @@
     margin: auto;
 }
 
-.checkout-box {
+/* .checkout-box {
     width: 100%;
-    margin-top: 57px;
+    margin-top: 76px;
     height: 180px;
     border-radius: 2px;
     border: 1px solid #d8d8d8;
     padding: 20px;
+} */
+.checkout-box {
+    width: 30vw;
+    margin-top: 57px;
+    height: 129px;
+    border-radius: 2px;
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+
+
 }
 
 .text {
@@ -322,6 +332,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    /*  */
     height: 40px;
     border-radius: 5px;
     background: #383838;

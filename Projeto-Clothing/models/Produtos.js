@@ -30,6 +30,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.FLOAT,
       allowNull: false
     },
+    foto_produto: {
+      type: DataTypes.FLOAT,
+      allowNull: true
+    },
     preco_oferta: {
       type: DataTypes.FLOAT,
       allowNull: true

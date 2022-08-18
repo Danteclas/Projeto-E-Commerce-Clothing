@@ -78,3 +78,5 @@ const setData = (data) => {
 
     })
 }
+setData();
+

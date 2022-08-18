@@ -1,9 +1,15 @@
+const { Produtos } = require('../models')
+
 const menuController = {
-  getHomepage: (req, res) => {
-    res.render('index');
+  getHomepage: async (req, res) => {
+    const produtos = await Produtos.findAll()
+
+    res.render('index', { produtos });
   },
-  getProduct: (req, res) => {
-    res.render('product')
+  getProduct: async (req, res) => {
+    const produtos = await Produtos.findAll()
+    console.log(produtos)
+    res.render('product', { produtos });
   },
   getSearch: (req, res) => {
     res.render('search')
@@ -25,8 +31,8 @@ const menuController = {
     res.render('login')
 
   },
-  getSeller: (req, res) => {
-    res.render('seller')
+  getMyPurchases: (req, res) => {
+    res.render('myPurchases')
 
   },
   getaddProduct: (req, res) => {
