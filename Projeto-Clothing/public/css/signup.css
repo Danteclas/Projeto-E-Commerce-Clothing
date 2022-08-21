@@ -51,6 +51,11 @@ textarea {
 
 }
 
+input:hover {
+    border-color: #5c9bb1;
+    transition: background-color 1s
+}
+
 form {
     animation: fade;
     animation-duration: 3s;
@@ -91,7 +96,7 @@ form {
 }
 
 .submit-btn:hover {
-    background-color: rgb(174, 137, 137);
+    background-color: #5c9bb1;
     color: #fff;
     transition: background-color 1s;
 

@@ -65,7 +65,7 @@ a {
 }
 
 img:hover {
-    background-color: #D8D8D8;
+    background-color: #c7daff;
     color: #fff;
     transition: background-color 1s;
 
@@ -109,7 +109,7 @@ img:hover {
 }
 
 .search-btn:hover {
-    background-color: #610B0B;
+    background-color: #5c9bb1;
     color: #fff;
     transition: background-color 1s;
 }

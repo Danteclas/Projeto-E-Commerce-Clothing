@@ -1,10 +1,10 @@
 window.onload = () => {
-    if(!sessionStorage.user){
+    if (!sessionStorage.user) {
         loaction.replace('/login');
     }
 }
 
-const placeOrderBtn = document.querySelector('.place-order-btn');
+/* const placeOrderBtn = document.querySelector('.place-order-btn');
 placeOrderBtn.addEventListener('click', () => {
     let address = getAddress();
 
@@ -43,4 +43,4 @@ const getAddress = () => {
     } else{
         return { address, street, city, state, pincode, landmark };
     }
-}
+} */

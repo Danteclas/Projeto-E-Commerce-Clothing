@@ -11,8 +11,7 @@ menuRouter.get('/404/', menuController.get404);
 menuRouter.get('/checkout/', menuController.getCheckout);
 menuRouter.get('/cart/', menuController.getCart);
 menuRouter.get('/login/', menuController.getLogin);
-menuRouter.get('/myPurchases/', menuController.getMyPurchases);
-menuRouter.get('/addProduct/', menuController.getaddProduct);
+menuRouter.get('/myPurchases/', menuController.getMyPurchases)
 
 
 

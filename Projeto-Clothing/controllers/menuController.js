@@ -1,4 +1,5 @@
-const { Produtos } = require('../models')
+const { Produtos } = require('../models');
+const CarrinhoController = require('./CarrinhoController');
 
 const menuController = {
   getHomepage: async (req, res) => {
@@ -24,7 +25,8 @@ const menuController = {
     res.render('checkout')
   },
   getCart: (req, res) => {
-    res.render('cart')
+
+    res.render('cart',);
 
   },
   getLogin: (req, res) => {
@@ -34,11 +36,8 @@ const menuController = {
   getMyPurchases: (req, res) => {
     res.render('myPurchases')
 
-  },
-  getaddProduct: (req, res) => {
-    res.render('addProduct')
+  }
 
-  },
 }
 
 module.exports = menuController;

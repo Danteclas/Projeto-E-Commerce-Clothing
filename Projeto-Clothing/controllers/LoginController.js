@@ -14,24 +14,24 @@ const LoginController = {
     Usuarios.findOne({
       where: {
         email,
+
       },
     }).then(user => {
+
+
+
       const userExists = bcrypt.compare(password, user.password)//password cadastrado no db.
 
       if (userExists) {// redirecionar para a roda de login novamente.
-
-
-
         res.redirect('/#')
       }
 
       // se der true a comparacao, então joga o usuario para a home da aplicacao 
 
-
-      if (!userExists) {
-        res.redirect('/signup')
-      }
-
+      /* if (!userExists) {
+        console.log('User does not exist');
+        res.redirect('/signup');
+      } */
 
     }
 
